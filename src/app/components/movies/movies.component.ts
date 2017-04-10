@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FirebaseService } from '../../services/firebase.service';
 
 @Component({
   selector: 'app-movies',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-
-  constructor() { }
+  movies;
+  constructor(private FB: FirebaseService) { }
 
   ngOnInit() {
+    this.FB.getMovies().subscribe(movies => {
+      console.log(movies);
+      this.movies = movies;
+    })
   }
 
 }
