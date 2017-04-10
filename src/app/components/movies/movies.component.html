@@ -1,3 +1,5 @@
-<p>
-  movies works!
-</p>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let movie of movies">
+      <a [routerLink]="['/listing/'+movie.$key]">{{movie.title}}</a>
+    </li>
+</ul>

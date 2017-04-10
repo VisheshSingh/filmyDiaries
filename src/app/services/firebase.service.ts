@@ -3,12 +3,12 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
 export class FirebaseService {
-  movies: FirebaseListObservable<any[]>;
+  listings: FirebaseListObservable<any[]>;
   constructor(private af: AngularFire) { }
 
   getMovies(){
-    this.movies = this.af.database.list('/movies') as FirebaseListObservable<Movie[]>
-    return this.movies;
+    this.listings = this.af.database.list('/listings') as FirebaseListObservable<Movie[]>
+    return this.listings;
   }
 }
 
