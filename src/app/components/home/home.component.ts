@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {AngularFire} from 'angularfire2';
+import { FlashMessagesService } from  'angular2-flash-messages';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public af: AngularFire, public fm: FlashMessagesService) { }
 
   ngOnInit() {
+  }
+
+  login(){
+    this.af.auth.login();
   }
 
 }
