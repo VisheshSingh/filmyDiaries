@@ -9,11 +9,11 @@
 
     <div class="col-md-8">
       <ul class="list-group">
-        <li class="list-group-item">Stars: {{listing.stars}}</li>
-        <li class="list-group-item">Director: {{listing.director}}</li>
-        <li class="list-group-item">IMDB Rating: {{listing.imdb}}</li>
-        <li class="list-group-item">Category: {{listing.category}}</li>
-        <li class="list-group-item">Plot: {{listing.description}}</li>
+        <li class="list-group-item"><strong>Stars:</strong> {{listing.stars}}</li>
+        <li class="list-group-item"><strong>Director:</strong> {{listing.director}}</li>
+        <li class="list-group-item"><strong>IMDB Rating:</strong> {{listing.imdb}}</li>
+        <li class="list-group-item"><strong>Category:</strong> {{listing.category}}</li>
+        <li class="list-group-item"><strong>Plot:</strong> {{listing.description}}</li>
       </ul>
     </div>
     <a class="btn btn-default" [routerLink]="['/edit-movie/'+listing.$key]">Edit</a>
