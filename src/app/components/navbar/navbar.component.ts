@@ -22,6 +22,6 @@ export class NavbarComponent implements OnInit {
   logout(){
     this.af.auth.logout();
     this.fm.show("You successfully logged out!", {cssClass: 'alert-success', timeout: 5000});
-    //this.router.navigate(['/']);
+    this.router.navigate(['/']);
   }
 }

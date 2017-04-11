@@ -1,3 +1,66 @@
-<p>
-  edit-movie works!
-</p>
+<a [routerLink]="['/movies']">Back</a>
+<br />
+<h2 class="page-header">Edit Movies</h2>
+<form (submit)="onEditSubmit()">
+  <div class="form-group">
+    <label>Title</label>
+    <input required class="form-control" type="text" [(ngModel)]="title" name="title" required>
+  </div>
+  <div class="form-group">
+    <label>Stars</label>
+    <input class="form-control" type="text" [(ngModel)]="stars" name="stars" required>
+  </div>
+  <div class="form-group">
+    <label>Director</label>
+    <input class="form-control" type="text" [(ngModel)]="director" name="director" required>
+  </div>
+  <div class="form-group">
+    <label>IMDB</label>
+    <input class="form-control" type="text" [(ngModel)]="imdb" name="imdb" required>
+  </div>
+  <div class="form-group">
+    <label>Category</label>
+    <input class="form-control" type="text" [(ngModel)]="category" name="category" required>
+  </div>
+  <div class="form-group">
+    <label>Year</label>
+    <select class="form-control" type="text" [(ngModel)]="year" name="year"  required>
+      <option value="1990">1990</option>
+      <option value="1990">1991</option>
+      <option value="1990">1992</option>
+      <option value="1990">1993</option>
+      <option value="1990">1994</option>
+      <option value="1990">1995</option>
+      <option value="1990">1996</option>
+      <option value="1990">1997</option>
+      <option value="1990">1998</option>
+      <option value="1990">1999</option>
+      <option value="2000">2000</option>
+      <option value="2001">2001</option>
+      <option value="2002">2002</option>
+      <option value="2003">2003</option>
+      <option value="2004">2004</option>
+      <option value="2005">2005</option>
+      <option value="2006">2006</option>
+      <option value="2007">2007</option>
+      <option value="2008">2008</option>
+      <option value="2009">2009</option>
+      <option value="2010">2010</option>
+      <option value="2011">2011</option>
+      <option value="2012">2012</option>
+      <option value="2013">2013</option>
+      <option value="2014">2014</option>
+      <option value="2015">2015</option>
+      <option value="2016">2016</option>
+      <option value="2017">2017</option>
+    </select>
+  </div>
+  <!--<div class="form-group">
+    <input id="image" type="file" [(ngModel)]="image"  name="image">
+  </div>-->
+  <div class="form-group">
+    <label>Plot</label>
+    <textarea class="form-control" type="text" [(ngModel)]="description" name="description"  required></textarea>
+  </div>
+  <input type="submit" value="Submit" class="btn btn-success">
+</form>

@@ -32,4 +32,9 @@ export class ListingComponent implements OnInit {
     })
   }
 
+  onDelete(){
+    this.fs.deleteListing(this.id);
+    this.router.navigate(['/movies']);
+  }
+
 }

@@ -32,6 +32,7 @@ const appRoutes: Routes = [
   {path:'', component: HomeComponent},
   {path:'movies', component: MoviesComponent},
   {path:'listing/:id', component: ListingComponent},
+  {path:'edit-movie/:id', component: EditMovieComponent},
   {path:'add-movie', component: AddMovieComponent}
 ]
 
